@@ -1,0 +1,45 @@
+using System;
+					
+public class Program
+{
+	public static void Main(){
+		
+	//declaração de variáveis
+	string nome, sobrenome;
+	double imc, peso, altura1, altura2;
+	
+	//coleta de variáveis
+	Console.WriteLine("Digite seu nome.");
+	nome = Console.ReadLine();
+	Console.WriteLine("Digite seu sobrenome.");
+	sobrenome = Console.ReadLine();
+	Console.WriteLine("Digite seu peso.");
+	peso = Convert.ToDouble(Console.ReadLine());
+	Console.WriteLine("Digite sua altura.");
+	altura1 = Convert.ToDouble(Console.ReadLine());
+	
+	//operações
+	altura2 = Math.Pow(altura1, altura1);
+	imc = peso/altura2;
+		
+	//exibição e tratamento de dados
+	Console.WriteLine("Olá " + nome + " " + sobrenome + "! Então você tem " + peso + " quilos e " + altura1 + " metros de altura!");
+		
+	//declarando IMC do usuário
+		if (imc < 18.5){
+			Console.WriteLine("Logo, você está abaixo do peso.");
+		}
+		else if(imc >= 18.5 & imc <= 24.9){
+			Console.WriteLine("Logo, você possui peso normal.");
+		}
+		else if(imc >= 25.0 & imc <= 29.9){
+			Console.WriteLine("Logo, você possui sobrepeso.");
+		}
+		else if(imc >= 30.0 & imc <= 39.9){
+			Console.WriteLine("Logo, você possui obesidade.");
+		}
+		else{
+			Console.WriteLine("Logo, você possui obesidade grave!");
+		}
+	}
+}
